@@ -45,37 +45,33 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.split {
-  display: flex;
-  flex-wrap: wrap;
-  border: 1px dashed chocolate;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem; }
-  .split.center {
-    justify-content: center; }
-
-.stack {
-  display: flex;
-  border: 1px dashed chocolate;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-  flex-direction: column; }
-  .stack.center {
+@media (min-width: 640px) {
+  .split {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px dashed chocolate;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem; }
+    .split.center {
+      justify-content: center; }
+  .stack {
+    display: flex;
+    border: 1px dashed chocolate;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    flex-direction: column; }
+    .stack.center {
+      align-items: center; }
+  .away {
+    justify-content: space-between; }
+  .align {
     align-items: center; }
-
-.away {
-  justify-content: space-between; }
-
-.align {
-  align-items: center; }
-
-.half {
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 50%; }
-
-.fl-1 {
-  flex: 1; }
+  .half {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%; }
+  .fl-1 {
+    flex: 1; } }
 
 body {
   background-color: gainsboro; }
