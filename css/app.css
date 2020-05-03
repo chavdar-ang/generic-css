@@ -45,31 +45,23 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body {
-  background-color: gainsboro; }
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px;
-  border: 1px solid coral; }
-
 .split {
   display: flex;
+  flex-wrap: wrap;
   border: 1px dashed chocolate;
   padding: 0.5rem;
   margin-bottom: 0.5rem; }
+  .split.center {
+    justify-content: center; }
 
 .stack {
   display: flex;
   border: 1px dashed chocolate;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
-  flex-direction: column;
-  align-items: center; }
-
-.center {
-  justify-content: center; }
+  flex-direction: column; }
+  .stack.center {
+    align-items: center; }
 
 .away {
   justify-content: space-between; }
@@ -84,6 +76,15 @@ body {
 
 .fl-1 {
   flex: 1; }
+
+body {
+  background-color: gainsboro; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid coral; }
 
 .box {
   background-color: #f8f8f8;
