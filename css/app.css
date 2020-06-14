@@ -56,8 +56,16 @@ div, a {
       justify-content: center; }
     .split.align, .flex.align {
       align-items: center; }
+    .split .align, .flex .align {
+      align-self: center; }
     .split.push, .flex.push {
       align-items: flex-end; }
+    .split .push, .flex .push {
+      align-self: flex-end; }
+    .split.pull, .flex.pull {
+      align-items: flex-start; }
+    .split .pull, .flex .pull {
+      align-self: flex-start; }
   .stack {
     display: flex;
     border: 1px dashed chocolate;

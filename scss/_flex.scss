@@ -11,13 +11,30 @@ div, a {
         &.center {
             justify-content: center;
         }
+        // check justify-self eventually
 
         &.align {
             align-items: center;
         }
 
+        .align {
+            align-self: center;
+        }
+
         &.push {
             align-items: flex-end;
+        }
+
+        .push {
+            align-self: flex-end;
+        }
+
+        &.pull {
+            align-items: flex-start;
+        }
+
+        .pull {
+            align-self: flex-start;
         }
     }
 
