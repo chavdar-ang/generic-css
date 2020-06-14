@@ -1,0 +1,26 @@
+// .picks {
+//     //
+// }
+
+.picks--left {
+    flex: 1;
+}
+
+.picks--right {
+    flex: 3;
+}
+
+.feature img {
+    width: 100%;
+}
+
+.content a {
+    display: block;
+}
+
+.tile {
+    background-image: url('/img/400.png');
+    background-size: cover;
+    background-position: center;
+    height: 423px;
+}

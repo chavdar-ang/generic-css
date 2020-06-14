@@ -1,5 +1,7 @@
 @import "_reset";
 @import "_flex";
+@import "_typography";
+@import "_components";
 
 body {
     background-color: gainsboro;
@@ -8,7 +10,11 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px;
+    border: 1px solid coral;
+}
+
+.container-fluid {
+    max-width: 100%;
     border: 1px solid coral;
 }
 
@@ -16,4 +22,8 @@ body {
     background-color: #f8f8f8;
     padding: 0.75rem 1rem;
     margin: 5px;
+}
+
+.text-center {
+    text-align: center;
 }
