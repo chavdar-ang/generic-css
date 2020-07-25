@@ -114,23 +114,30 @@ h5 {
 h6 {
   font-size: 1em; }
 
-.picks--left {
-  flex: 1; }
+.logo {
+  height: 40px; }
 
-.picks--right {
-  flex: 3; }
+.nav .item {
+  text-decoration: none;
+  padding: 8px; }
 
-.feature img {
-  width: 100%; }
+.nav .item:hover {
+  text-decoration: underline; }
 
-.content a {
-  display: block; }
+.nav .item.auth {
+  text-decoration: none;
+  padding: 8px 12px; }
 
-.tile {
-  background-image: url("/img/400.png");
-  background-size: cover;
-  background-position: center;
-  height: 423px; }
+input .g-form {
+  width: 100%;
+  height: 36px;
+  padding: 8px 13px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #667d99;
+  background-color: #e7edf3;
+  border: 2px solid transparent;
+  border-radius: 4px; }
 
 body {
   background-color: gainsboro; }

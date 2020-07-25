@@ -9,112 +9,64 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <nav class="box split align away">
-            <div class="logo">logo</div>
-            <div class="split">
-                <a href="#" class="subscribe">subscribe</a>
-                <div class="user-icon">i</div>
-                <div class="search-icon">i</div>
-            </div>
-        </nav>
-    </div>
-
-    <div class="container">
-        <section id="latest" class="text-center">
-            <h1>
-                latest stories
-            </h1>
-            <p>Subscribe for full access to read stories from National Geographic.</p>
-        </section>
-
-        <section id="picks">
-            <div class="split">
-                <ul class="picks--left">
-                    <li class="split">
-                        <div class="feature fl-1">
-                            <img src="/img/400.png" class="feature" alt="">
-                        </div>
-                        <div class="content fl-3">
-                            <a href="#" class="category">hystory</a>
-                            <a href="#" class="title">How the assassination of Medgar Evers galvanized the civil rights movement</a>
-                        </div>
-                    </li>
-
-                    <li class="split">
-                        <div class="feature fl-1">
-                            <img src="/img/400.png" class="feature" alt="">
-                        </div>
-                        <div class="content fl-3">
-                            <a href="#" class="category">hystory</a>
-                            <a href="#" class="title">How the assassination of Medgar Evers galvanized the civil rights movement</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#">see more</a>
-                    </li>
-                </ul>
-                <div class="picks--right">
-                    <div class="tile flex push">
-                        <div class="content">
-                            <a href="#" class="category">animals</a>
-                            <a href="#" class="title">A rare look at fireflies that blink in unison, in a forest without tourists</a>
-                            <a href="#">read</a>
-                        </div>
+    <div id="app">
+        <header>
+            <div class="container">
+                <div class="navbar split away">
+                    <div class="flex align">
+                        <a href="#">
+                            <img src="./img/logo.png" alt="logo" class="logo">
+                        </a>
+                        <nav class="nav">
+                            <a href="#" class="item">Home</a>
+                            <a href="#" class="item">Donate</a>
+                            <a href="#" class="item">Docs</a>
+                            <a href="#" class="item">Guidelines</a>
+                        </nav>
                     </div>
-                    <div class="split">
-                        <div>
-                            article 1
+                    <div class="flex align">
+                        <div class="search">
+                            <input type="text" class="g-form">
                         </div>
-                        <div>
-                            article 2
+                        <div class="nav">
+                            <a href="#" class="item auth">Sign Up</a>
+                            <a href="#" class="item auth">Log In</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </header>
 
-        <hr>
-        <hr>
-
-        <div class="split center">
-            <div class="box half">.box .half</div>
-            <div class="box">box</div>
-        </div>
-
-        <div class="split away">
-            <div class="box half">.box .half</div>
-            <div class="box">box</div>
-        </div>
-
-        <div class="split">
-            <div class="box fl-1">.box .fl-1</div>
-            <div class="box">.box</div>
-        </div>
-
-        <div class="split align">
-            <div class="fl-1">{logo} .fl-1</div>
-            <div>
-                <a href="#">link</a>
-                <a href="#">link</a>
-                <span>image</span>
-            </div>
-        </div>
-
-        <div class="stack center">
-            <div>{ logo }</div>
-            <div class="split">
-                <div>{ icon }</div>
-                <input type="text">
-                <a href="#" class="button">button</a> &nbsp;
-                <a href="#" class="button">button</a>
-            </div>
-            <div>
-                <a href="#" class="button">button</a>
-                <a href="#" class="button">button</a>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-        </div>
+        <main class="container split">
+            <section class="sidebar fl-1">
+                <ul>
+                    <li>
+                        <a href="#">All discussions</a>
+                    </li>
+                    <li>
+                        <a href="#">Tags</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="discussions fl-3">
+                <ul>
+                    <li>
+                        <h3 class="title">Need Community Input on Non-English Character Support</h3>
+                        <p class="excerpt">
+                            Hello Flarumites, Here at Flarum we want to be inclusive to everyone regardless of where they live or the language they speak.
+                            We understand that Flarum is being used all over...
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="title">Need Community Input on Non-English Character Support</h3>
+                        <p class="excerpt">
+                            Hello Flarumites, Here at Flarum we want to be inclusive to everyone regardless of where they live or the language they speak.
+                            We understand that Flarum is being used all over...
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </main>
     </div>
 </body>
 
