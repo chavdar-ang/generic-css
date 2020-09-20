@@ -1,0 +1,23 @@
+nav {
+    .item {
+        text-decoration: none;
+        padding: 8px;
+    }
+
+    .item:hover {
+        text-decoration: underline;
+    }
+
+    .item.auth {
+        text-decoration: none;
+        padding: 8px 12px;
+    }
+}
+
+.sub-nav {
+    box-shadow: 0 1px 0 rgba(0,0,0,.1);
+    background-color: white;
+    a {
+        padding: 16px 0;
+    }
+}

@@ -1,29 +1,4 @@
-@import "_reset";
-@import "_flex";
-@import "_typography";
-@import "components/_index";
+// Global requirements
+@import "./core/index.scss";
+@import "./components/index.scss";
 
-body {
-    background-color: gainsboro;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    border: 1px solid coral;
-}
-
-.container-fluid {
-    max-width: 100%;
-    border: 1px solid coral;
-}
-
-.box {
-    background-color: #f8f8f8;
-    padding: 0.75rem 1rem;
-    margin: 5px;
-}
-
-.text-center {
-    text-align: center;
-}
