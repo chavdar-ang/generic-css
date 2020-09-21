@@ -1,20 +1,43 @@
-nav {
+.navbar {
+    padding: 16px;
+    height: 65px;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.15);
+
+    a {
+        color: #D2D2EE;
+        font-size: 14px;
+    }
+
     .item {
-        text-decoration: none;
-        padding: 8px;
+        padding-right: 16px;
     }
 
-    .item:hover {
-        text-decoration: underline;
-    }
-
-    .item.auth {
-        text-decoration: none;
-        padding: 8px 12px;
+    .logo {
+        height: 25px;
     }
 }
 
-.sub-nav {
-    box-shadow: 0 1px 0 rgba(0,0,0,.1);
-    background-color: white;
+.sub-header {
+    background-color: rgba(94, 94, 154, 1);
 }
+
+// nav {
+//     .item {
+//         text-decoration: none;
+//         padding: 8px;
+//     }
+
+//     .item:hover {
+//         text-decoration: underline;
+//     }
+
+//     .item.auth {
+//         text-decoration: none;
+//         padding: 8px 12px;
+//     }
+// }
+
+// .sub-nav {
+//     box-shadow: 0 1px 0 rgba(0,0,0,.1);
+//     background-color: white;
+// }

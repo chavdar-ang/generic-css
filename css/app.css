@@ -186,24 +186,23 @@ body {
   text-align: center; }
 
 header, .header {
-  padding: 16px; }
-  header .logo, .header .logo {
+  background-color: #5e5e9a;
+  height: 400px; }
+
+.navbar {
+  padding: 16px;
+  height: 65px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15); }
+  .navbar a {
+    color: #D2D2EE;
+    font-size: 14px; }
+  .navbar .item {
+    padding-right: 16px; }
+  .navbar .logo {
     height: 25px; }
 
-nav .item {
-  text-decoration: none;
-  padding: 8px; }
-
-nav .item:hover {
-  text-decoration: underline; }
-
-nav .item.auth {
-  text-decoration: none;
-  padding: 8px 12px; }
-
-.sub-nav {
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  background-color: white; }
+.sub-header {
+  background-color: #5e5e9a; }
 
 input .g-form {
   width: 100%;
