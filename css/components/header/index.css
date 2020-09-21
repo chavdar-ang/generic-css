@@ -1,7 +1,4 @@
 header, .header {
-  background-color: #333333;
   padding: 16px; }
-  header a, .header a {
-    color: white; }
   header .logo, .header .logo {
     height: 25px; }
