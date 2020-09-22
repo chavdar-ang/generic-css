@@ -96,8 +96,7 @@ table {
 
 @media (min-width: 640px) {
   .split, .flex {
-    display: flex;
-    flex-wrap: wrap; }
+    display: flex; }
     .split.center, .flex.center {
       justify-content: center; }
     .split.align, .flex.align {
@@ -166,8 +165,7 @@ h6, .h6 {
   font-weight: 500; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  background-color: gainsboro; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; }
 
 .container {
   max-width: 1200px;
@@ -186,8 +184,7 @@ body {
   text-align: center; }
 
 header, .header {
-  background-color: #5e5e9a;
-  height: 400px; }
+  background-color: #5e5e9a; }
 
 .navbar {
   padding: 16px;
@@ -204,6 +201,27 @@ header, .header {
 .sub-header {
   background-color: #5e5e9a; }
 
+.card {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.84);
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  padding: 20px; }
+  .card .card__header {
+    margin-bottom: 15px; }
+    .card .card__header .card__header__meta {
+      padding-left: 10px; }
+      .card .card__header .card__header__meta a {
+        display: block; }
+
+.img.circle {
+  border-radius: 100%; }
+
+.img.sm {
+  width: 36px;
+  height: 36px; }
+
 input .g-form {
   width: 100%;
   height: 36px;
@@ -214,3 +232,13 @@ input .g-form {
   background-color: #e7edf3;
   border: 2px solid transparent;
   border-radius: 4px; }
+
+.hero {
+  max-width: 640px;
+  color: white;
+  margin: 0 auto;
+  padding: 20px 30px; }
+
+.container-posts {
+  max-width: 640px;
+  margin: 0 auto; }

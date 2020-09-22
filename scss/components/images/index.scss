@@ -1,0 +1,10 @@
+.img {
+    &.circle {
+        border-radius: 100%;
+    }
+
+    &.sm {
+        width: 36px;
+        height: 36px;
+    }
+}

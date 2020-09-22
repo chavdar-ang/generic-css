@@ -1,6 +1,5 @@
 header, .header {
-  background-color: #5e5e9a;
-  height: 400px; }
+  background-color: #5e5e9a; }
 
 .navbar {
   padding: 16px;
@@ -16,6 +15,27 @@ header, .header {
 
 .sub-header {
   background-color: #5e5e9a; }
+
+.card {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.84);
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  padding: 20px; }
+  .card .card__header {
+    margin-bottom: 15px; }
+    .card .card__header .card__header__meta {
+      padding-left: 10px; }
+      .card .card__header .card__header__meta a {
+        display: block; }
+
+.img.circle {
+  border-radius: 100%; }
+
+.img.sm {
+  width: 36px;
+  height: 36px; }
 
 input .g-form {
   width: 100%;

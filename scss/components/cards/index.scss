@@ -1,0 +1,18 @@
+.card {
+    background: #fff;
+    color: rgba(0,0,0,.84);
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.09);
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    padding: 20px;
+
+    .card__header {
+        margin-bottom: 15px;
+        .card__header__meta {
+            a {
+                display: block;
+            }
+            padding-left: 10px;
+        }
+    }
+}
