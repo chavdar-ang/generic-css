@@ -11,121 +11,265 @@
 
 <body>
     <div id="app">
-        <header>
-            <div class="navbar">
-                <div class="container split away">
-                    <div class="flex align">
+        <!-- Section Header -->
+        <div class="container">
+            <!-- Section Header -->
+            <div class="Header bg-purple">
+                <div class="Header-item">
+                    <a href="#" class="Header-link f4 d-flex flex-items-center">
+                        <span>A blog</span>
+                    </a>
+                </div>
+
+                <div class="Header-item">
+                    <a href="#" class="Header-link">Index</a>
+                </div>
+                <div class="Header-item">
+                    <a href="#" class="Header-link">Single</a>
+                </div>
+                <div class="Header-item">
+                    <input type="search" class="form-control input-dark" />
+                </div>
+            </div>
+
+            <!-- Section Featured Posts -->
+            <section class="blog-featured"></section>
+
+            <!-- Section Categories -->
+            <section class="blog-categories flex">
+                <div class="Box hover-grow">
+                    <a href="#" class="p-2 d-block">
+                        <h4>
+                            Company
+                        </h4>
+                    </a>
+
+                    <div class="d-inline-block alt-mono-font p-2">
+                        <a href="#">Policy</a>, <a href="#">Remote work</a>, <a href="#">Updates</a>
+                    </div>
+                </div>
+
+                <div class="Box hover-grow">
+                    <a href="#" class="p-2 d-block">
+                        <h4>
+                            Community
+                        </h4>
+                    </a>
+
+                    <div class="d-inline-block alt-mono-font p-2">
+                        <a href="#">Education</a>, <a href="#">Events</a>, <a href="#">Insights</a>, <a href="#">Open
+                            source</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Posts -->
+            <section class="blog-posts">
+                <h3>All posts</h3>
+
+                <!-- Single Article -->
+                <article class="post-item d-flex flex-column flex-md-row mb-8 px-sm-0">
+
+                    <div class="post-item__date col-12 col-md-3">
                         <a href="#">
-                            <img src="./img/logo.png" alt="logo" class="logo">
+                            <time datetime="2020-09-25" pubdate="">
+                                September 25, 2020
+                            </time>
                         </a>
-                        <nav>
-                            <a href="#" class="item">Home</a>
-                            <a href="#" class="item">Donate</a>
-                            <a href="#" class="item">Docs</a>
-                            <a href="#" class="item">Guidelines</a>
-                        </nav>
                     </div>
-                    <div class="flex align">
-                        <div class="search">
-                            <input type="text" class="g-form">
+
+                    <div class="col-12 col-lg-7">
+
+                        <ul class="d-flex flex-row flex-wrap mb-3">
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Marketplace</a></li>
+                            <li><a href="#">Open source</a></li>
+                        </ul>
+
+                        <h4 class="f3 mb-4">
+                            <a href="#">
+                                GitHub Action Hero · James Ives and “GitHub Pages Deploy” </a>
+                        </h4>
+
+                        <div class="mb-3">
+                            <p>GitHub Actions gives you the power to automate your workflow. Connect with the tools you
+                                know and love. Have more freedom to innovate and be creative. Deploy to any cloud, build
+                                containers, automate messages, and</p>
                         </div>
-                        <nav>
-                            <a href="#" class="item auth">Sign Up</a>
-                            <a href="#" class="item auth">Log In</a>
-                            <a href="#" class="item">Get started</a>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <div class="hero">
-                <div class="flex">
-                    <div>
-                        <h2>Quick Code</h2>
-                        <p>
-                            A list of best courses to learn programming, web, mobile, chatbot, AR/VR development,
-                            database management, data science, web design and cryptocurrency.
-                        </p>
-                    </div>
-                    <div>
-                        <img src="/img/hero-icon.png" alt="Hero icon">
-                    </div>
-                </div>
-            </div>
-        </header>
 
-        <div class="sub-header">test</div>
+                        <a href="#" class="d-inline-flex flex-row flex-items-center">
+                            <div class="author-block__pic mr-3">
+                                <img alt="Image of Michelle Mannering" src="/img/avatar.jpg"
+                                    class="avatar avatar-35 photo avatar-default" height="35" width="35">
+                            </div>
+                            <p class="f5 m-0">
+                                Michelle Mannering
+                            </p>
+                        </a>
 
-        <div class="sub-nav" style="display: none;">
-            <div class="container split away">
-                <a href="#">Customer stories</a>
-                <div class="flex">
-                    <a href="#">Strat a free trial</a>
-                    <a href="#">Contact sales</a>
+                    </div>
+
+                </article>
+
+                <!-- View more button -->
+                <a href="https://github.blog/page/2/" class="mb-6 mb-md-2 p-3 btn btn-outline">View more posts</a>
+            </section>
+
+            <!-- Section footer -->
+            <footer class="mt-6">
+
+                <div class="container-lg p-responsive">
+                    <div class="d-flex flex-wrap py-5 mb-5">
+                        <div class="col-12 col-lg-4 mb-5">
+                            <a href="#" class="text-gray-dark">A blog (logo)</a>
+                        </div>
+                        <div class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-lg-0 pl-lg-4">
+                            <h4 class="mb-3 text-mono text-gray-light text-normal">
+                                Product
+                            </h4>
+                            <ul class="list-style-none text-gray f5">
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://github.com/features" class="link-gray">
+                                        Features </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://github.com/security" class="link-gray">
+                                        Security </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://github.com/enterprise" class="link-gray">
+                                        Enterprise </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://github.com/customer-stories" class="link-gray">
+                                        Customer stories </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://github.com/pricing" class="link-gray">
+                                        Pricing </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://resources.github.com" class="link-gray">
+                                        Resources </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-md-0 pl-md-4">
+                            <h4 class="mb-3 text-mono text-gray-light text-normal">
+                                Platform </h4>
+                            <ul class="list-style-none f5">
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://developer.github.com/" class="link-gray">
+                                        Developer API </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="http://partner.github.com" class="link-gray">
+                                        Partners </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://atom.io" class="link-gray">
+                                        Atom </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="http://electron.atom.io" class="link-gray">
+                                        Electron </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://desktop.github.com" class="link-gray">
+                                        GitHub Desktop </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-md-0 pl-md-4">
+                            <h4 class="mb-3 text-mono text-gray-light text-normal">
+                                Support </h4>
+                            <ul class="list-style-none f5">
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://help.github.com" class="link-gray">
+                                        Help </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://github.community" class="link-gray">
+                                        Community Forum </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://services.github.com" class="link-gray">
+                                        Training </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://status.github.com" class="link-gray">
+                                        Status </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://github.com/contact" class="link-gray">
+                                        Contact </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-md-0 pl-md-4">
+                            <h4 class="mb-3 text-mono text-gray-light text-normal">
+                                Company </h4>
+                            <ul class="list-style-none f5">
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://github.com/about" class="link-gray">
+                                        About </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://github.blog" class="link-gray">
+                                        Blog </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://github.com/about/careers" class="link-gray">
+                                        Careers </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://github.com/about/press" class="link-gray">
+                                        Press </a>
+                                </li>
+                                <li class="lh-condensed mb-3">
+                                    <a href="https://shop.github.com" class="link-gray">
+                                        Shop </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="bg-gray-light">
+                    <div
+                        class="container-lg p-responsive f6 py-4 d-sm-flex flex-justify-between flex-row-reverse flex-items-center">
+                        <ul
+                            class="list-style-none d-flex flex-items-center mb-3 mb-sm-0 lh-condensed-ultra site-footer__social-list">
+                            <li class="mr-3">
+                                <a href="#">
+                                    <span class="screen-reader-text">Twitter link</span>
+                                </a>
+                            </li>
+                            <li class="mr-3">
+                                <a href="#">
+                                    <span class="screen-reader-text">Facebook link</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="list-style-none d-flex text-gray">
+                            <li class="mr-3">
+                                © 2020 Blog, Inc. </li>
+                            <li class="mr-3">
+                                <a href="#" class="link-gray">
+                                    Terms
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link-gray">
+                                    Privacy
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </footer>
         </div>
 
-        <main class="container container-posts">
-            <section class="posts">
-
-                <h1>test</h1>
-
-                <div class="box-shadow p-3">
-                    .box-shadow
-                </div>
-                <hr>
-                <div class="card">
-                    <div class="card__header split">
-                        <img src="/img/hero-icon.png" class="img circle sm" alt="Icon">
-                        <div class="card__header__meta">
-                            <a href="#">Quick Code in Dev Tutorials</a>
-                            <time>Nov 30, 2018</time>
-                        </div>
-                    </div>
-                    <figure>
-                        <a href="#">
-                            <img src="/img/post-cover-small.png" alt="Post cover" width="100%">
-                        </a>
-                    </figure>
-                    <div>
-                        <h3>Top Online Courses to Prepare for Salesforce Certification Exams</h3>
-                        <h4>Learn software project management techniques to grow your…</h4>
-                    </div>
-                </div>
-            </section>
-
-            <section class="sidebar fl-1" style="display: none;">
-                <ul>
-                    <li>
-                        <a href="#">All discussions</a>
-                    </li>
-                    <li>
-                        <a href="#">Tags</a>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="discussions fl-3" style="display: none;">
-                <ul>
-                    <li>
-                        <h3 class="title">Need Community Input on Non-English Character Support</h3>
-                        <p class="excerpt">
-                            Hello Flarumites, Here at Flarum we want to be inclusive to everyone regardless of where
-                            they live or the language they speak.
-                            We understand that Flarum is being used all over...
-                        </p>
-                    </li>
-                    <li>
-                        <h3 class="title">Need Community Input on Non-English Character Support</h3>
-                        <p class="excerpt">
-                            Hello Flarumites, Here at Flarum we want to be inclusive to everyone regardless of where
-                            they live or the language they speak.
-                            We understand that Flarum is being used all over...
-                        </p>
-                    </li>
-                </ul>
-            </section>
-        </main>
     </div>
 </body>
 

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/primer.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <title>Generic CSS</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Section Header -->
+        <div class="container">
+            <main>
+                <section class="px-3 py-4 pb-md-8">
+                    <article class="col-12">
+                        <div class="mb-3 mb-md-9 pb-0 pb-md-4">
+                            <div class="post-featured__image"><img width="100%" src="/img/blog-feature-image.png"
+                                    alt="Blog title eventually">
+                            </div>
+                        </div>
+
+                        <header class="d-block mb-6">
+                            <div>
+                                <div class="d-flex flex-column flex-md-row flex-md-items-center my-3 col-12">
+                                    <p class="m-0 alt-mono-font f5"><time datetime="2020-09-23">September 23, 2020
+                                        </time></p><span class="col-1"></span>
+                                    <div class="col-12 col-md-6 flex-auto d-flex flex-row flex-wrap alt-mono-font">
+                                        <li><a href="#">Features</a></li>
+                                        <li><a href="#">Product</a></li>
+                                    </div>
+                                </div>
+                                <h1 class="my-2 f00-light lh-condensed">GitHub Mobile and GraphQL </h1> <a href="#"
+                                    class="author-block d-inline-flex flex-row flex-items-center">
+                                    <div class="mr-3"><img alt="Image of Brad Pitt" src="/img/avatar.jpg" class="avatar"
+                                            height="35" width="35"></div>
+                                    <p class="f5 m-0">Brad Pitt </p>
+                                </a>
+                            </div>
+
+                        </header>
+
+                        <div class="markdown-body col-12 col-md-10 mb-2 mb-md-4">
+
+                            <p>
+                                GitHub’s mobile applications have used <a href="#" target="_blank"
+                                    rel="noopener noreferrer">GraphQL</a>to power new features. We’ve now been able to
+                                move faster and get more done with less hassle and no over-fetching.
+                            </p>
+                            <p>
+
+
+                            <p>
+                                We were able to turn to the open source community and use Apollo for iOS and Android. By
+                                doing so, we moved at warp-speed. We also minimized ongoing engineering effort on what
+                                is a core part of our mobile applications.
+                            </p>
+                            <p>
+                                GraphQL has allowed us to focus less on the tedium around networking, modeling, and API
+                                stability. It’s allowed us to focus on the things we’re really passionate about:
+                                <strong>building great experiences</strong>.
+                            </p>
+                            <h2>The GraphQL mindset
+                            </h2>
+                            <p>
+                                GraphQL has a bit of a learning curve. It requires a change in mindset for people who
+                                have worked in REST environments.
+                            </p>
+                            <p>
+                                GraphQL provides interfaces, types, methods, and the associated documentation as a data
+                                structure. This paves the way for tooling to be built on top of it. This is often
+                                referred to as the schema. The schema is a representation of the available interfaces,
+                                types, an mutations that can modify them. There are no endpoints for different responses
+                                in the GraphQL world. Thus the first necessary shift in mindset is from thinking in
+                                endpoints, to thinking in types. GraphQL isn’t SQL. But, thinking about it in terms of a
+                                SQL schema can be helpful in facilitating the necessary shift in mindset. The schema is
+                                a record of the available data types, queries and mutations on the backend. External
+                                clients – like the mobile app – hold onto a reference of the schema that must be
+                                manually updated.
+                            </p>
+                            <h2>Moving from the REST mindset to GraphQL
+                            </h2>
+                            <p>
+                                Moving from the REST mindset into the GraphQL means shifting thought away from HTTP
+                                methods. You no longer think about GET and POST methods; you now only think about
+                                operations, like query and mutation. Queries are analogous to an HTTP get. They are any
+                                operation that retrieves data from the server. Mutations, on the other hand, encompass
+                                the rest of the possible HTTP operations. A mutation occurs whenever the client wants to
+                                modify data on the server. This could be a POST, PUT, DELETE, or PATCH.</p>
+                            <p>
+                                Since the client defines the data it wants, and endpoints don’t exist, the response is
+                                whatever the client wants it to be – so long as it’s valid within the schema. This
+                                allows client engineers to write queries specific to the view they’re working on, rather
+                                than using bloated responses or correlating roundtrips across multiple endpoints.</p>
+                            <p>
+                                Despite the shift in thought, the GraphQL mindset is actually less complex than the REST
+                                mindset. There are the available query types, available mutations, and the inputs they
+                                take. There is no more thought being given to endpoints or to response structure.</p>
+                            <h2>Code generation
+                            </h2>
+                            <p>
+                                One of the largest strengths of GraphQL on mobile, is code generation of static types
+                                for network responses. Being able to generate our network models saves us an incredible
+                                amount of time, effort, and upkeep.
+                            </p>
+                            <p>
+                                In most REST-based systems, we’d have to manually define our network models and consider
+                                encoding and decoding strategies. While encoding and decoding has gotten easier over the
+                                years with both iOS’s Codable and Kotlin’s built-in serialization, it’s still a
+                                consideration that needs to be made. In addition, codable implementations require the
+                                whole model to be part of the response. Keys must be manually kept up to date with their
+                                server counterparts, and structural changes to the response are generally breaking
+                                changes to older clients.
+                            </p>
+                            <p>
+                                Using Apollo and GraphQL, however, we no longer have to consider this foundational step
+                                of app development. Apollo’s tooling allows us to statically type our network responses.
+                                This leads our clients to know and trust the data they’re receiving. From there, we’re
+                                free to transform and do with them as we wish. As our backend changes, our models keep
+                                up to date with the backend changes each time we refresh our schema.</p>
+                            <p>
+                                Since GraphQL API’s have field-level deprecation, we can be certain any updates to our
+                                backend models don’t break our mobile consumers.</p>
+                            <h2>
+                                Fragments
+                            </h2>
+                            <p>
+                                A fragment is a small reusable piece of GraphQL. On the GitHub mobile team, we are very
+                                heavy users of fragments. We use them to ensure data and API consistency across models.
+                                It also reduces the total number of models. A common example would be our actorFields
+                                fragment:
+                            </p>
+                            <p>
+                                <img class="size-full" src="/img/blog-feature-image.png" alt="Image title">
+                            </p>
+                            <p>
+                                In the GitHub API, an Actor represents an object that can take actions – most typically
+                                a user. We re-use this fragment across large parts of our application. This allows for a
+                                very consistent model API. For example, all of our mobile timeline events have an actor
+                                or multiple actors. By using field, each of those GraphQL queries becomes shorter, and
+                                the generated models are more consistent.
+                            </p>
+                            <p>
+                                By re-using fragments, this allows us to quickly prop up new queries and mutations. The
+                                more powerful aspect of using fragments is fragments are composable; we are not limited
+                                to using one fragment per type. For example, when requesting a User, we could request
+                                their actor fields as well as information related to their follows and following:</p>
+                            <p>
+                                <img class="size-full" src="/img/blog-feature-image.png" alt="Image title">
+                            <p>
+                                By doing this, we’re able to reduce repetition across our GraphQL queries and generate
+                                less models – the response object for SomeQuery contains two models that we’ve already
+                                previously generated. More crucially, we can now reuse and compose the fragments we’ve
+                                already defined! We can create smaller view models initialzied with type-specific
+                                fragments, and compose them into a larger view models just by composing the fragments.
+                            </p>
+                            <h2>
+                                Platform differences
+                            </h2>
+                            <p>
+                                There are noticeable differences between the iOS and Android implementations of the
+                                Apollo GraphQL library.
+                            </p>
+                            <p>
+                                Both iOS and Android (via Kotlin) have introduced their own reactive primitives.
+                                Apollo’s Kotlin support is still young, but it’s working well enough for us to use in
+                                production. Combined support, however, is still on its way – it’s listed as a long-term
+                                goal in the Apollo <a href="#" target="_blank" rel="noopener noreferrer">roadmap</a>.
+                            </p>
+                            <p>
+                                Additionally, some fragments – notably those performing on interfaces – are only
+                                possible to generate on iOS. This is rarely ever a roadblock; it frequently requires
+                                more explicit adherence to the types that Apollo-GraphQL recognizes.</p>
+                            <p>
+                                Ultimately, there are some platform differences, but they don’t translate into large
+                                shifts from one platform to the other. The generated code provided by Apollo is similar
+                                enough between the two languages. This means it can be used in much the same way. The
+                                Apollo team is also working on aligning and reducing differences across the Apollo
+                                Client projects – both web and mobile.</p>
+                            <h2>
+                                In Closing
+                            </h2>
+                            <p>
+                                GraphQL and Apollo’s tooling allows us to operate at a high degree of efficiency. By
+                                allowing us to abstract away many of the concerns traditionally affect mobile
+                                applications, we can focus on building features rapidly. Additionally, we get the
+                                benefit of every part of every network request becoming useful while no longer having to
+                                maintain the network responses ourselves.
+                            </p>
+
+                            <div class="pt-5 pt-md-0">
+                                <div>
+                                    <strong
+                                        class="f3 alt-mono-font text-gray d-inline-block mb-2 mb-lg-4 underline-dash">
+                                        Share
+                                    </strong>
+                                    <ul class="d-flex flex-row flex-lg-column">
+                                        <li>
+                                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                                <span class="social-links__text f5">Twitter</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                                <span class="social-links__text f5">Facebook</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                                <span class="social-links__text f5">LinkedIn</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+                <section class="px-3 py-6 py-md-9 bg-gray-light">
+
+                    <div class="container-xl">
+                        <strong class="f3 alt-mono-font text-gray d-inline-block mb-4 underline-dash">
+                            Related posts
+                        </strong>
+                    </div>
+
+                    <div class="d-flex flex-column flex-md-row mt-4">
+
+                        <div class="col-12 col-md-4 px-3 pl-md-0 pr-md-5">
+                            <article class="d-flex flex-column flex-lg-row mb-8 px-sm-0">
+                                <div class="col-12 col-lg-6">
+                                    <div class="d-flex flex-column flex-lg-row flex-lg-items-center f4">
+                                        <p class="m-0 alt-mono-font">
+                                            <time datetime="2020-09-23">September 23, 2020</time>
+                                        </p>
+                                        <div class="flex-auto">
+                                            <a class="alt-mono-font" href="#">Enterprise</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="f3 mb-4">
+                                        <a href="#">
+                                            GitHub Enterprise Server 2.22 is here
+                                        </a>
+                                    </h4>
+                                    <div class="mb-3">
+                                        <p>
+                                            GitHub Enterprise Server 2.22 is now here with GitHub Actions, Packages and
+                                            Advanced Security Code Scanning available for the very first time.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="d-inline-flex flex-row flex-items-center">
+                                        <div class="mr-3">
+                                            <img alt="Image of Maya Ross" src="/img/avatar.jpg"
+                                                class="avatar avatar-35 photo avatar-default" height="35" width="35">
+                                        </div>
+                                        <p class="f5 m-0">Maya Ross</p>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-4 px-3 pl-md-0 pr-md-5">
+                            <article class="d-flex flex-column flex-lg-row mb-8 px-sm-0">
+                                <div class="col-12 col-lg-6">
+                                    <div class="d-flex flex-column flex-lg-row flex-lg-items-center f4">
+                                        <p class="m-0 alt-mono-font">
+                                            <time datetime="2020-09-23">September 23, 2020</time>
+                                        </p>
+                                        <div class="flex-auto">
+                                            <a class="alt-mono-font" href="#">Enterprise</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="f3 mb-4">
+                                        <a href="#">
+                                            GitHub Enterprise Server 2.22 is here
+                                        </a>
+                                    </h4>
+                                    <div class="mb-3">
+                                        <p>
+                                            GitHub Enterprise Server 2.22 is now here with GitHub Actions, Packages and
+                                            Advanced Security Code Scanning available for the very first time.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="d-inline-flex flex-row flex-items-center">
+                                        <div class="mr-3">
+                                            <img alt="Image of Maya Ross" src="/img/avatar.jpg"
+                                                class="avatar avatar-35 photo avatar-default" height="35" width="35">
+                                        </div>
+                                        <p class="f5 m-0">Maya Ross</p>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-4 px-3 pl-md-0 pr-md-5">
+                            <article class="d-flex flex-column flex-lg-row mb-8 px-sm-0">
+                                <div class="col-12 col-lg-6">
+                                    <div class="d-flex flex-column flex-lg-row flex-lg-items-center f4">
+                                        <p class="m-0 alt-mono-font">
+                                            <time datetime="2020-09-23">September 23, 2020</time>
+                                        </p>
+                                        <div class="flex-auto">
+                                            <a class="alt-mono-font" href="#">Enterprise</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="f3 mb-4">
+                                        <a href="#">
+                                            GitHub Enterprise Server 2.22 is here
+                                        </a>
+                                    </h4>
+                                    <div class="mb-3">
+                                        <p>
+                                            GitHub Enterprise Server 2.22 is now here with GitHub Actions, Packages and
+                                            Advanced Security Code Scanning available for the very first time.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="d-inline-flex flex-row flex-items-center">
+                                        <div class="mr-3">
+                                            <img alt="Image of Maya Ross" src="/img/avatar.jpg"
+                                                class="avatar avatar-35 photo avatar-default" height="35" width="35">
+                                        </div>
+                                        <p class="f5 m-0">Maya Ross</p>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>
